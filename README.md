@@ -25,6 +25,10 @@ On Windows
 
 ### `venv\Scripts\activate`
 
+Once venv is activated, install requirements.
+
+### `pip install -r requirements.txt`
+
 Deactivate
 
 ### `deactivate`

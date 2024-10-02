@@ -5,11 +5,11 @@ import React, { useState, useEffect } from 'react';
 function App() {
 
   const [items, setItems] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
 
   useEffect(() => {
-    fetch('/items').then(res => res.json()).then(data => {
-      console.log(data);
-      // setItems(data);
+    fetch('/api/time').then(res => res.json()).then(data => {
+      setCurrentTime(data.time);
     });
   }, []);
 
@@ -28,6 +28,9 @@ function App() {
         >
           Learn React
         </a>
+        <div>
+          <p>The current time is {currentTime}.</p>
+        </div>
       </header>
     </div>
   );

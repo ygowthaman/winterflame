@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Dependencies
+For React Client, install the following
+
+### `sudo apt install npm`
+
+Note: For development, client needs to run separate from the server.
+
 ## Available Scripts
 
 In the project directory, you can run:

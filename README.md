@@ -1,5 +1,5 @@
 # Gettings Started
-View instructions to get started in the client and server in the respective folders. Once development environment is set up, follow the below steps to deploy the application to access it from other systems on the network.
+View instructions to get started for the client and server in the respective folders. Once development environment is set up, follow the below steps to deploy the application to access it from other systems on the network.
 
 Install all the dependencies. Server needs python. Rest API helpers need Flask. Deployment needs Gunicorn and Nginx. UI needs NPM and React libraries.
 
@@ -56,7 +56,7 @@ Note that the contents of the winterflame.nginx file has a path to the UI build 
 
 Now Gunicorn needs to be included to serve the APIs.
 
-#### Run Gunicorn as a service
+## Run Gunicorn as a service
 If this is run as a service, then it will auto start when sytem goes down and comes back up.
 
 1. Create a new service file:
@@ -92,7 +92,7 @@ WantedBy=multi-user.target
 
 ### `sudo systemctl status winterflame`
 
-#### Adding Gunicorn to Nginx
+## Adding Gunicorn to Nginx
 
 Update /etc/nginx/sites-available/winterflame.nginx
 

@@ -1,8 +1,9 @@
 import logo from './assets/img/logo.png';
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import "bootstrap-icons/font/bootstrap-icons.css";
+import SidePanel from './components/NavPanel/NavPanel';
+import MainPanel from './components/MainPanel/MainPanel';
+import NavPanel from './components/NavPanel/NavPanel';
 
 function App() {
 
@@ -17,10 +18,16 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header d-flex justify-content-start align-items-center">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header className="App-header d-flex justify-content-between align-items-center">
         <h1>Ravenswood</h1>
+        <img src={logo} className="App-logo" alt="logo" />
       </header>
+      <div>
+        <div className="row">
+          <NavPanel />
+          <MainPanel />
+        </div>
+      </div>
     </div>
   );
 }

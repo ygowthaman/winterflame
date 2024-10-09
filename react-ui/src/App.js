@@ -1,6 +1,8 @@
-import logo from './logo.svg';
+import logo from './assets/img/logo.png';
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function App() {
 
@@ -15,22 +17,9 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header d-flex justify-content-start align-items-center">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <div>
-          <p>The current time is {currentTime}.</p>
-        </div>
+        <h1>Ravenswood</h1>
       </header>
     </div>
   );

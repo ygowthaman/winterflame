@@ -1,7 +1,6 @@
 import logo from './assets/img/logo.png';
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import SidePanel from './components/NavPanel/NavPanel';
 import MainPanel from './components/MainPanel/MainPanel';
 import NavPanel from './components/NavPanel/NavPanel';
 

@@ -1,12 +1,14 @@
 from flask import Flask
 from routes.items_routes import items_routes
 from routes.thoughts_routes import thoughts_routes
+from routes.users_routes import users_routes
 import time
 
 app = Flask(__name__, static_folder="../react-ui/build", static_url_path="/")
 
 app.register_blueprint(items_routes)
 app.register_blueprint(thoughts_routes)
+app.register_blueprint(users_routes)
 
 
 @app.route("/")

@@ -12,5 +12,5 @@ def getThoughts():
 @thoughts_routes.route("/api/thought", methods=["POST"])
 def addThought():
     requestParams = request.json
-    thoughts_service.addThoughts(requestParams['data'])
+    thoughts_service.addThoughts(requestParams)
     return {"Success": True}

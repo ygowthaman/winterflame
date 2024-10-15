@@ -1,0 +1,13 @@
+.thought-form {
+  padding: 20px;
+  border-bottom: solid 1px rgb(50, 50, 50);
+}
+
+.thought-textarea {
+  margin: 0 15px;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}

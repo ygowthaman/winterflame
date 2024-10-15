@@ -3,13 +3,13 @@ import datetime as dt
 
 
 def addThoughts(data):
-    print(data)
-    thought = {
+    new_thought = {
+        "id": len(thoughts) + 1,
         "user": data["user"],
         "thought": data["thought"],
         "created_time": dt.datetime.now(),
     }
-    thoughts.append(thought)
+    thoughts.append(new_thought)
     return
 
 

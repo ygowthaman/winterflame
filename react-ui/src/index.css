@@ -3,9 +3,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
   margin: 10px;
-  color: rgb(159 159 159);
+  color: rgb(143, 140, 140);
   background-color: rgb(39, 39, 39);
   overflow: hidden;
 }
@@ -22,8 +21,9 @@ h1 {
 /* Roboto Black */
 @font-face {
   font-family: 'Montserrat';
-  src: url('./assets/fonts/Montserrat-Black.ttf') format('truetype');
-  font-weight: 900;
+  src: url('./assets/fonts/Montserrat-Medium.ttf') format('truetype');
+  font-optical-sizing: auto;
+  font-weight: 500;
   /* Black weight is typically 900 */
   font-style: normal;
 }
@@ -31,7 +31,7 @@ h1 {
 /* Roboto Black Italic */
 @font-face {
   font-family: 'Montserrat';
-  src: url('./assets/fonts/Montserrat-BlackItalic.ttf') format('truetype');
+  src: url('./assets/fonts/Montserrat-LightItalic.ttf') format('truetype');
   font-weight: 900;
   /* Black weight is typically 900 */
   font-style: italic;
@@ -40,7 +40,7 @@ h1 {
 /* Roboto Bold */
 @font-face {
   font-family: 'Montserrat';
-  src: url('./assets/fonts/Montserrat-Bold.ttf') format('truetype');
+  src: url('./assets/fonts/Montserrat-Black.ttf') format('truetype');
   font-weight: 700;
   /* Bold weight is typically 700 */
   font-style: normal;

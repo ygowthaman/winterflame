@@ -1,11 +1,19 @@
 .rw-card {
   margin: 20px;
-  border: solid 1px rgb(73, 73, 73);
+  border: solid 1px #626161;
   border-radius: 5px;
   padding: 5px 10px;
 }
 
-.grid-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.rw-header {
+  border-bottom: solid 1px #2f2f2f;
+}
+
+.rw-content {
+  color: #9b9a9a;
+}
+
+
+.rw-footer {
+  border-top: solid 1px #2f2f2f;
 }

@@ -59,15 +59,15 @@ function Thoughts() {
             onClick={addRambling}>Add</button>
         </div>
       </header>
-      <section>
+      <div className="row">
         {
           ramblings.map((r) => {
-            return <div className="grid-wrapper" key={r.id}>
+            return <div className="col-sm-4" key={r.id}>
               <RwCard data={r} />
             </div>
           })
         }
-      </section>
+      </div>
     </div>
   )
 }

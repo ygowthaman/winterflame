@@ -10,7 +10,7 @@ def addThoughts(data):
         "created_time": dt.datetime.now(),
     }
     thoughts.append(new_thought)
-    return
+    return new_thought
 
 
 def getThoughts():

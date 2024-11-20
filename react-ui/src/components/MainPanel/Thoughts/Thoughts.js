@@ -33,7 +33,8 @@ function Thoughts() {
 
   const addRambling = () => {
     ThoughtsService.addRambling(inputs).then((response) => {
-      console.log(response);
+      ramblings.push(response);
+      setInputs({ ...inputs, user: '', thought: '' })
     })
   }
 
@@ -41,8 +42,8 @@ function Thoughts() {
     <div>
       <header className="thought-form d-flex flex-row">
         <div>
-          <select className="form-select" onChange={handleChange} name="selectUser">
-            <option value={null}>Select User</option>
+          <select className="form-select" onChange={handleChange} name="selectUser" value={inputs.user}>
+            <option value="">Select User</option>
             {
               users.map(u => {
                 return <option value={u.user} key={u.user}>{u.user}</option>
@@ -52,7 +53,7 @@ function Thoughts() {
         </div>
         <div className="thought-textarea flex-grow-1">
           <textarea className="form-control" id="thoughtTextarea" rows="1" maxLength="240" name="ramblingEntry"
-            onChange={handleChange}></textarea>
+            onChange={handleChange} value={inputs.thought}></textarea>
         </div>
         <div>
           <button className="btn btn-primary" disabled={!inputs.user || !inputs.thought}

@@ -40,26 +40,27 @@ function Thoughts() {
 
   return (
     <div>
-      <header className="thought-form d-flex flex-row">
-        <div>
-          <select className="form-select" onChange={handleChange} name="selectUser" value={inputs.user}>
-            <option value="">Select User</option>
-            {
-              users.map(u => {
-                return <option value={u.user} key={u.user}>{u.user}</option>
-              })
-            }
-          </select>
-        </div>
-        <div className="thought-textarea flex-grow-1">
-          <textarea className="form-control" id="thoughtTextarea" rows="1" maxLength="240" name="ramblingEntry"
-            onChange={handleChange} value={inputs.thought}></textarea>
-        </div>
-        <div>
+      <div>
+        <form className="form-inline">
+          <div className="form-group col-md-8">  
+            <select className="form-select" onChange={handleChange} name="selectUser" value={inputs.user}>
+              <option value="">Select User</option>
+              {
+                users.map(u => {
+                  return <option value={u.user} key={u.user}>{u.user}</option>
+                })
+              }
+            </select>
+          </div>
+          <div className="form-group col-md-8">
+            <textarea className="form-control" id="thoughtTextarea" rows="3" maxLength="240" name="ramblingEntry"
+              onChange={handleChange} value={inputs.thought}></textarea>
+          </div>
           <button className="btn btn-primary" disabled={!inputs.user || !inputs.thought}
             onClick={addRambling}>Add</button>
-        </div>
-      </header>
+        </form>
+      </div>
+
       <div className="row">
         {
           ramblings.map((r) => {

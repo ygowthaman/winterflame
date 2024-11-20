@@ -1,10 +1,13 @@
-const httpHeaders = new Headers({'content-type': 'application/json'})
+import { Thought } from "../models/thoughts.model";
+
+const httpHeaders = new Headers({ 'content-type': 'application/json' })
 
 const ThoughtsService = {
 
   getAllRamblings: async () => {
     const apiResponse = await fetch('/api/thoughts');
-    return apiResponse.json();
+    const response = await apiResponse.json();
+    return response.map(r => new Thought(r));
   },
 
   addRambling: async (rambling) => {
@@ -13,7 +16,8 @@ const ThoughtsService = {
       body: JSON.stringify(rambling),
       headers: httpHeaders,
     })
-    return await apiResponse.json();
+    const response = await apiResponse.json();
+    return response.map(r => new Thought(r));
   }
 
 }

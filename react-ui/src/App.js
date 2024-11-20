@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header d-flex justify-content-between align-items-center">
-        <h1 className="sm-view">RW</h1>
+        <h2 className="sm-view">Ravenswood</h2>
         <h1 className="lg-view">Ravenswood</h1>
         <img src={logo} className="App-logo" alt="logo" />
       </header>

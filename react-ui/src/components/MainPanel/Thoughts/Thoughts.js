@@ -39,10 +39,10 @@ function Thoughts() {
   }
 
   return (
-    <div>
-      <div>
-        <form className="form-inline">
-          <div className="form-group col-md-8">  
+    <div className="container">
+      <form>
+        <div className="row align-items-center">
+          <div className="col-md-4 mt-3">
             <select className="form-select" onChange={handleChange} name="selectUser" value={inputs.user}>
               <option value="">Select User</option>
               {
@@ -52,16 +52,17 @@ function Thoughts() {
               }
             </select>
           </div>
-          <div className="form-group col-md-8">
-            <textarea className="form-control" id="thoughtTextarea" rows="3" maxLength="240" name="ramblingEntry"
+          <div className="col-md-6 mt-3">
+            <textarea className="form-control" id="thoughtTextarea" rows="1" maxLength="240" name="ramblingEntry"
               onChange={handleChange} value={inputs.thought}></textarea>
           </div>
-          <button className="btn btn-primary" disabled={!inputs.user || !inputs.thought}
-            onClick={addRambling}>Add</button>
-        </form>
-      </div>
-
-      <div className="row">
+          <div className="col-md-2 mt-3">
+            <button className="btn btn-primary" disabled={!inputs.user || !inputs.thought}
+              onClick={addRambling}>Add</button>
+          </div>
+        </div>
+      </form>
+      <div className="row mt-3">
         {
           ramblings.map((r) => {
             return <div className="col-sm-4" key={r.id}>

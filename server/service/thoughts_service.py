@@ -29,6 +29,7 @@ def addThoughts(data):
 
 
 def getThoughts():
+    thoughts.clear()
     connection = pymysql.connect(host='localhost',
                              user='admin',
                              password='admin',

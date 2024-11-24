@@ -18,6 +18,14 @@ const ThoughtsService = {
     })
     const response = await apiResponse.json();
     return response.map(r => new Thought(r));
+  },
+
+  deleteRambling: async (ramblingUuid) => {
+    const apiResponse = await fetch(`/api/thought/${ramblingUuid}`, {
+      method: 'DELETE',
+      headers: httpHeaders
+    })
+    return apiResponse.json();
   }
 
 }

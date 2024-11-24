@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import ThoughtsService from '../../../services/thoughts.service';
-import RwCard from '../../common/RwCard/RwCard';
+import ThoughtCard from '../../common/ThoughtCard/ThoughtCard';
 import { getUsers } from '../../../services/users.service';
 import './Thoughts.css';
 
@@ -53,7 +53,7 @@ function Thoughts() {
             </select>
           </div>
           <div className="col-md-6 mt-3">
-            <textarea className="form-control" id="thoughtTextarea" rows="1" maxLength="240" name="ramblingEntry"
+            <textarea className="form-control" id="thoughtTextarea" rows="1" maxLength="480" name="ramblingEntry"
               onChange={handleChange} value={inputs.thought}></textarea>
           </div>
           <div className="col-md-2 mt-3">
@@ -66,7 +66,7 @@ function Thoughts() {
         {
           ramblings.map((r) => {
             return <div className="col-sm-4" key={r.id}>
-              <RwCard data={r} />
+              <ThoughtCard data={r} />
             </div>
           })
         }

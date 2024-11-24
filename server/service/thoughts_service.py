@@ -20,6 +20,7 @@ db_conn_pool = pymysqlpool.ConnectionPool(size=2, maxsize=3, pre_create_num=2, n
                         database=db,
                         charset='utf8mb4',
                         port=db_port,
+                        autocommit=1,
                         cursorclass=pymysql.cursors.DictCursor)
 
 
@@ -56,7 +57,7 @@ def getThoughts():
                     "thought": x["thought"],
                     "created_time": dt.datetime.utcfromtimestamp(x["create_time"])
                 }
-                print(new_thought)
+                #print(new_thought)
                 thoughts.append(new_thought)
     return thoughts
 

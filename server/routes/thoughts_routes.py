@@ -1,4 +1,4 @@
-from flask import Blueprint, request
+from flask import Blueprint, request, jsonify
 import service.thoughts_service as thoughts_service
 
 thoughts_routes = Blueprint("thoughts_routes", __name__)
@@ -13,4 +13,9 @@ def getThoughts():
 def addThought():
     requestParams = request.json
     response = thoughts_service.addThoughts(requestParams)
-    return response
+    return jsonify({'message': 'request processed successfully'}), 200
+
+@thoughts_routes.route("/api/thought/<thought_id>", methods=["DELETE"])
+def deleteThought(thought_id):
+    thoughts_service.deleteThought(thought_id)
+    return jsonify({'message': 'request processed successfully'}), 200

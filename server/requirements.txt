@@ -2,3 +2,4 @@ flask
 flask-dotenv
 gunicorn
 pymysql
+pymysql-pool
